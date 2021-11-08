@@ -1,0 +1,31 @@
+<h1>Stupid Coaching</h1>
+  <div class="ask">
+  <% if @message == 'I am going to work' %>
+  <p> <%= @message %> <br> - You</p>
+   </div>
+
+  <div class="answer">
+  <p> Great! <br> - Your coach</p>
+  </div>
+
+<div class="ask">
+  <% elsif @message.include? '?' %>
+  <p> <%= @message %> <br> - You</p>
+</div>
+
+<div class="answer">
+  <p> Silly question, get dressed and go to work! <br> - Your coach</p>
+  </div>
+
+<div class="ask">
+<% else %>
+<p> <%= @message %> <br> - You</p>
+</div>
+
+<div class="answer">
+  <p> I don't care, get dressed and go to work! <br> - Your coach</p>
+  </div>
+
+<% end %>
+
+<%= link_to "Ask a new question", ask_path %>
